@@ -16,6 +16,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
+    <!-- fontawesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- fontmontserrat -->
@@ -42,11 +44,11 @@
     <?php echo get_template_part( 'template-parts/content', 'top' ) ?>
     <!-- end top -->
 
-    <header id="masthead" class="header site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
+    <header id="masthead" class="l-header site-header navbar-static-top pt-2 pb-4 <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
 
         <div class="container-fluid">
 
-            <nav class="navbar navbar-expand-xl justify-content-center p-0">
+            <nav class="l-navbar navbar navbar-expand-xl justify-content-center p-0">
 
                 <div class="col-2">
                     <div class="navbar-brand">
@@ -67,23 +69,72 @@
 
                         <div class="col-12">
                             
-                            <div class="row"><!-- -->
+                            <div class="row justify-content-between">
 
-                                <div class="col-4">
+                                <div class="col-7">
 
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <span class="px:u-w-25 px:u-h-25 rounded-full u-icon u-icon__free u-icon__envelope u-font-size-0 before::u-font-size-22 u-color-folk-white u-bg-folk-medium-electric-blue">
+                                    <ul class="d-flex mb-0 pl-0">
+
+                                        <li class="u-list-style-none">
+
+                                            <a 
+                                            class="d-flex align-items-center text-decoration-none" 
+                                            href="#">
+                                                <span class="px:u-w-25 px:u-h-25 rounded-pill u-icon__free u-icon__envelope d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-14 u-font-weight-semibold u-color-folk-white u-bg-folk-medium-electric-blue">
                                                     Envelope
                                                 </span>
 
-                                                centroancora@copiosaredencao.org.br
+                                                <span class="u-font-size-14 u-font-weight-medium u-color-folk-aluminium pl-2">
+                                                    centroancora@copiosaredencao.org.br
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="u-list-style-none ml-3">
+
+                                            <a 
+                                            class="d-flex align-items-center text-decoration-none" 
+                                            href="#">
+                                                <span class="px:u-w-25 px:u-h-25 rounded-pill u-icon__free u-icon__phone d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-14 u-font-weight-semibold u-color-folk-white u-bg-folk-medium-electric-blue">
+                                                    Telefone
+                                                </span>
+
+                                                <span class="u-font-size-14 u-font-weight-medium u-color-folk-aluminium pl-2">
+                                                    222 000 7777
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-3">
+
+                                    <ul class="d-flex mb-0 pl-0">
+
+                                        <li class="u-list-style-none">
+                                            <a
+                                            class="u-icon__brands u-icon__facebook-square u-font-size-0 before::u-font-size-22 u-font-weight-light text-decoration-none u-color-folk-medium-electric-blue hover:u-color-folk-golden"
+                                            href="#"
+                                            target="_blank"
+                                            rel="noreferrer noopener">
+                                                Link do Facebook
+                                            </a>
+                                        </li>
+
+                                        <li class="u-list-style-none ml-3">
+                                            <a
+                                            class="u-icon__brands u-icon__instagram u-font-size-0 before::u-font-size-22 u-font-weight-light text-decoration-none u-color-folk-medium-electric-blue hover:u-color-folk-golden"
+                                            href="#"
+                                            target="_blank"
+                                            rel="noreferrer noopener">
+                                                Link do Instagram
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+
+                            <hr>
                         </div>
 
                         <div class="col-12">
@@ -92,7 +143,7 @@
                                     'theme_location'  => 'primary',
                                     'container'       => 'div',
                                     'container_id'    => 'main-nav',
-                                    'container_class' => 'collapse navbar-collapse justify-content-center',
+                                    'container_class' => 'collapse navbar-collapse justify-content-start',
                                     'menu_id'         => false,
                                     'menu_class'      => 'navbar-nav',
                                     'depth'           => 3,

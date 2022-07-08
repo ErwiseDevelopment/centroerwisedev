@@ -13,9 +13,27 @@ $utility-name: 'u-icon';
         }
     }
 
+    &__envelope {
+        &::before {
+            content: '\f0e0';
+        }
+    }
+
+    &__phone {
+        &::before {
+            content: '\f879';
+        }
+    }
+
     &__facebook {
         &::before {
             content: '\f39e';
+        }
+
+        &-square {
+            &::before {
+                content: '\f082';
+            }
         }
     }
 

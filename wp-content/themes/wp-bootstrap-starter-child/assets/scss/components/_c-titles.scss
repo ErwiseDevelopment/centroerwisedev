@@ -1,0 +1,7 @@
+$component-name: 'c-title';
+
+.#{$component-name} {
+    &-highlight {
+        font-size: 3rem;
+    }   
+}

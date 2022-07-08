@@ -1,8 +1,24 @@
 $utility-name: 'u-color-folk';
 
 .#{$utility-name} {
+    &-aluminium {
+        color: $color-folk-aluminium !important;
+    }
+
     &-black {
         color: $color-folk-black !important;
+    }
+
+    &-dark-blue {
+        color: $color-folk-dark-blue !important;
+    }
+
+    &-gray {
+        color: $color-folk-gray !important;
+    }
+
+    &-medium-electric-blue {
+        color: $color-folk-medium-electric-blue !important;
     }
 
     &-white {
@@ -50,6 +66,12 @@ $utility-name: 'u-color-folk';
         &-black {
             &:hover {
                 color: $color-folk-black !important;
+            }
+        }
+
+        &-golden {
+            &:hover {
+                color: $color-folk-golden !important;
             }
         }
 

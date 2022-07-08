@@ -19,6 +19,14 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
+<!-- banner -->
+<?php echo get_template_part( 'template-parts/content', 'banner' ); ?>
+<!-- end banner -->
+
+<!-- about -->
+<?php echo get_template_part( 'template-parts/content', 'about' ); ?>
+<!-- end about -->
+
 <img
 class="img-fluid"
 data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"

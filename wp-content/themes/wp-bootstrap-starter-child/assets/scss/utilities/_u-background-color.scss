@@ -81,6 +81,12 @@ $utility-name: 'u-bg-folk';
             }
         }
 
+        &-golden {
+            &:hover {
+                background-color: $color-folk-golden !important;
+            }
+        }
+
         &-none {
             &:hover {
                 background: none !important;

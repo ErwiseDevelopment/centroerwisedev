@@ -1,0 +1,17 @@
+$layout-name: 'l-about';
+
+.#{$layout-name} {
+    position: relative;
+    background-color: $color-folk-extra-light-gray;
+
+    &::before {
+        content: '';
+        width: 25%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: $color-folk-dark-blue;
+        z-index: 0;
+    }
+}
