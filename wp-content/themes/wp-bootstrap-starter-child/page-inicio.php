@@ -27,6 +27,14 @@ get_header(); ?>
 <?php echo get_template_part( 'template-parts/content', 'about' ); ?>
 <!-- end about -->
 
+<!-- news -->
+<?php echo get_template_part( 'template-parts/content', 'news' ); ?>
+<!-- end news -->
+
+<!-- more content -->
+<?php echo get_template_part( 'template-parts/content', 'more-content' ); ?>
+<!-- end more content -->
+
 <img
 class="img-fluid"
 data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"

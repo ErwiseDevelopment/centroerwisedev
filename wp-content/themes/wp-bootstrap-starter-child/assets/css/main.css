@@ -495,6 +495,8 @@ button.swiper-pagination-bullet {
 
 .u-bg-folk-black {
   background-color: #000 !important; }
+.u-bg-folk-cyan-blue {
+  background-color: #265877 !important; }
 .u-bg-folk-dark-blue {
   background-color: #0B2139 !important; }
 .u-bg-folk-golden {
@@ -829,8 +831,12 @@ button.swiper-pagination-bullet {
   color: #828690 !important; }
 .u-color-folk-black {
   color: #000 !important; }
+.u-color-folk-cyan-blue {
+  color: #265877 !important; }
 .u-color-folk-dark-blue {
   color: #0B2139 !important; }
+.u-color-folk-dark-grayish-navy {
+  color: #232733 !important; }
 .u-color-folk-gray {
   color: #5B5B5B !important; }
 .u-color-folk-medium-electric-blue {
@@ -892,6 +898,13 @@ button.swiper-pagination-bullet {
 
 .u-cursor-pointer {
   cursor: pointer !important; }
+
+.u-font-family-lato {
+  font-family: 'Lato', sans-serif !important; }
+.u-font-family-myriad-pro {
+  font-family: 'Myriad Pro', sans-serif; }
+.u-font-family-nunito {
+  font-family: 'Nunito', sans-serif; }
 
 .u-font-size-0 {
   font-size: 0 !important; }
