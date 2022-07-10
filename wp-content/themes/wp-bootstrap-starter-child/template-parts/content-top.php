@@ -20,7 +20,7 @@
                     <div class="col-9">
 
                         <ul class="d-flex pl-0 mb-0">
-                            <?php for( $i = 0; $i < 5; $i++ ) { ?>
+
                             <li class="l-top__item u-list-style-none py-3 px-4">
                                 <a 
                                 class="l-top__link u-font-size-14 u-font-weight-semibold text-decoration-none u-color-folk-white"
@@ -28,7 +28,38 @@
                                     Institucional
                                 </a>
                             </li>
-                            <?php } ?>
+
+                            <li class="l-top__item u-list-style-none py-3 px-4">
+                                <a 
+                                class="l-top__link u-font-size-14 u-font-weight-semibold text-decoration-none u-color-folk-white"
+                                href="#">
+                                    Evangelização
+                                </a>
+                            </li>
+
+                            <li class="l-top__item u-list-style-none py-3 px-4">
+                                <a 
+                                class="l-top__link u-font-size-14 u-font-weight-semibold text-decoration-none u-color-folk-white"
+                                href="#">
+                                    Recuperação
+                                </a>
+                            </li>
+
+                            <li class="l-top__item u-list-style-none py-3 px-4">
+                                <a 
+                                class="l-top__link u-font-size-14 u-font-weight-semibold text-decoration-none u-color-folk-white"
+                                href="#">
+                                    Vocacional
+                                </a>
+                            </li>
+
+                            <li class="l-top__item u-list-style-none py-3 px-4">
+                                <a 
+                                class="l-top__link u-font-size-14 u-font-weight-semibold text-decoration-none u-color-folk-white"
+                                href="#">
+                                    Juventude
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </div>

@@ -9,8 +9,20 @@ $utility-name: 'u-bg-folk';
         background-color: $color-folk-cyan-blue !important;
     }
 
+    &-dark-grayish-navy {
+        background-color: $color-folk-dark-grayish-navy !important;
+    }
+
     &-dark-blue {
         background-color: $color-folk-dark-blue !important;
+    }
+
+    &-facebook {
+        background-color: $color-folk-facebook !important;
+    }
+
+    &-instagram {
+        background-color: $color-folk-instagram !important;
     }
 
     &-golden {
@@ -23,6 +35,10 @@ $utility-name: 'u-bg-folk';
 
     &-none {
         background: none !important;
+    }
+
+    &-youtube {
+        background-color: $color-folk-youtube !important;
     }
 
     &-white {

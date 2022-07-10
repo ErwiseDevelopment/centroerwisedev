@@ -1,18 +1,10 @@
 /* services */
-const swiperServices = new Swiper('.swiper-container-services', {
-    pagination: {
-        el: '.swiper-pagination-services',
-    },
-});
+const swiperTeam = new Swiper( '.js-swiper-team', {
+    slidesPerView: 3,
+    spaceBetween: 30,
 
-/* testemonials */
-const swiperTestemonials = new Swiper('.swiper-container-testemonials', {
     navigation: {
-        nextEl: '.swiper-button-next-testemonials',
-        prevEl: '.swiper-button-prev-testemonials',
-    },
-
-    pagination: {
-        el: '.swiper-pagination-testemonials',
-    },
+        prevEl: '.js-swiper-button-prev-team',
+        nextEl: '.js-swiper-button-next-team'
+    }
 });

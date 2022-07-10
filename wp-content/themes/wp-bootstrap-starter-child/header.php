@@ -46,7 +46,7 @@
     <?php echo get_template_part( 'template-parts/content', 'top' ) ?>
     <!-- end top -->
 
-    <header id="masthead" class="l-header site-header navbar-static-top pt-2 pb-4 <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
+    <header id="masthead" class="l-header site-header navbar-static-top position-relative pt-2 pb-4 <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
 
         <div class="container-fluid">
 
@@ -139,7 +139,7 @@
                             <hr>
                         </div>
 
-                        <div class="col-12">
+                        <div class="col-12 d-flex">
                             <?php
                                 wp_nav_menu(array(
                                     'theme_location'  => 'primary',
@@ -153,6 +153,8 @@
                                     'walker'          => new wp_bootstrap_navwalker()
                                 ));
                             ?>
+
+                            <span class="u-icon__free u-icon__search before::u-font-size-40 u-font-weight-semibold u-color-folk-black u-cursor-pointer u-color-folk-aluminium js-search"></span>
                         </div>
                     </div>
                 </div>
@@ -162,6 +164,43 @@
                 </button>
             </nav>
         </div>
+
+        <div class="l-search-box js-search-box py-3">
+
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col-12">
+
+                        <form method="GET" action="<?php echo get_home_url( null, '/' ) ?>">
+ 
+                            <div class="row justify-content-center">
+
+                                <div class="col-8">
+                                    <input
+                                    class="w-100 border-0 shadow rounded d-block u-font-size-14 u-font-weight-regular u-font-style-italic u-color-folk-aluminium py-2 px-3"
+                                    type="search"
+                                    name="s"
+                                    placeholder="Pesquisar...">
+                                </div>
+
+                                <div class="col-2">
+                                    <input
+                                    class="w-100 border rounded d-block u-font-size-14 u-font-weight-bold text-center u-color-folk-white u-bg-folk-dark-blue hover:u-bg-folk-golden py-2 px-3"
+                                    type="submit"
+                                    value="Pesquisar">
+                                </div>
+
+                                <div class="col-1 d-flex align-items-center pl-0">
+                                    <span class="u-icon__free u-icon__close u-font-size-20 u-font-weight-bold u-color-folk-dark-blue u-cursor-pointer hover:u-color-folk-golden js-search-close"></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header><!-- #masthead -->
-    
+
     <?php endif; ?>

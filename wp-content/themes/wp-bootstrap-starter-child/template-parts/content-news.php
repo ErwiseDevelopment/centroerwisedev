@@ -85,7 +85,7 @@
 
                         <a
                         class="w-100 u-box-shadow-pattern d-flex justify-content-center align-items-center u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-cyan-blue hover:u-bg-folk-golden py-3"
-                        href="#">
+                        href="<?php echo get_home_url( null, 'noticias' ) ?>">
                             Ver mais
                         </a>
                     </div>

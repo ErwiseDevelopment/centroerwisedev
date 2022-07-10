@@ -35,10 +35,9 @@ get_header(); ?>
 <?php echo get_template_part( 'template-parts/content', 'more-content' ); ?>
 <!-- end more content -->
 
-<img
-class="img-fluid"
-data-src="<?php echo get_template_directory_uri()?>/../wp-bootstrap-starter-child/assets/images/banner-illustration.png"
-alt="Single Temas">
+<!-- team -->
+<?php echo get_template_part( 'template-parts/content', 'team' ); ?>
+<!-- end team -->
 
 <?php endwhile; ?>
 

@@ -13,9 +13,21 @@ $utility-name: 'u-icon';
         }
     }
 
+    &__close {
+        &::before {
+            content: '\f00d';
+        }
+    }
+
     &__envelope {
         &::before {
             content: '\f0e0';
+        }
+    }
+
+    &__local {
+        &::before {
+            content: '\f3c5';
         }
     }
 
