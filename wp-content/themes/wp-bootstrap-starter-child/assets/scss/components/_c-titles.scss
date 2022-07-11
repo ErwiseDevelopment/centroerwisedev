@@ -1,7 +1,21 @@
 $component-name: 'c-title';
 
 .#{$component-name} {
+    &-pattern {
+        @media screen and (min-width: 1600px) {
+            font-size: 3.125rem;
+        }
+    }
+
     &-highlight {
         font-size: 3rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 3.5rem;
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 2rem;
+        }
     }   
 }

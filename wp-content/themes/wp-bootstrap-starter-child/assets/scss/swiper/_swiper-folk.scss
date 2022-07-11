@@ -1,11 +1,19 @@
 .l-team {
-    &:hover ~ {
+    &:hover {
         .swiper-button-prev-team {
             left: -5rem;
+            
+            @media screen and (min-width: 1600px) {
+                left: -15rem;
+            }
         }
 
         .swiper-button-next-team {
             right: -5rem;
+
+            @media screen and (min-width: 1600px) {
+                right: -15rem;
+            }
         }
     }
 }

@@ -13,5 +13,13 @@ $layout-name: 'l-about';
         position: absolute;
         background-color: $color-folk-dark-blue;
         z-index: 0;
+
+        @media screen and (min-width: 1600px) {
+            width: 30%;
+        }
+
+        @media screen and (max-width: 991px) {
+            display: none;
+        }
     }
 }

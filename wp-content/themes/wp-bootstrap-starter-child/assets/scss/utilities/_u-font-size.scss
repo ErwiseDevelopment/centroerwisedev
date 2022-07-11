@@ -584,6 +584,12 @@ $utility-name: 'u-font-size';
                 font-size: .9375rem !important;
             }
         }
+
+        &-16 {
+            @media screen and (min-width: 1600px) {
+                font-size: 1rem !important;
+            }
+        }
     
         &-17 {
             @media screen and (min-width: 1600px) {
@@ -594,6 +600,18 @@ $utility-name: 'u-font-size';
         &-18 {
             @media screen and (min-width: 1600px) {
                 font-size: 1.125rem !important;
+            }
+        }
+
+        &-20 {
+            @media screen and (min-width: 1600px) {
+                font-size: 1.25rem !important;
+            }
+        }
+
+        &-22 {
+            @media screen and (min-width: 1600px) {
+                font-size: 1.375rem !important;
             }
         }
     }    

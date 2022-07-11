@@ -25,17 +25,17 @@
         </div>
     </footer> #colophon -->
 
-    <footer class="footer u-bg-folk-dark-grayish-navy py-5">
+    <footer class="l-footer u-bg-folk-dark-grayish-navy py-5">
         
         <div class="container">
 
             <div class="row justify-content-center">
 
-                <div class="col-10 py-5">
+                <div class="col-lg-10 py-5">
 
                     <div class="row justify-content-around">
 
-                        <div class="col-3">
+                        <div class="col-8 col-lg-3 mb-5 mb-lg-0">
 
                             <a href="#">
                                 <img
@@ -45,7 +45,7 @@
                             </a>
                         </div>
 
-                        <div class="col-4">
+                        <div class="col-lg-4">
 
                             <h6 class="u-font-weight-bold u-color-folk-white pl-3">
                                 Entre em contato
@@ -85,7 +85,7 @@
 
             <div class="row justify-content-end">
 
-                <div class="col-4 d-flex justify-content-center align-items-center">
+                <div class="col-lg-4 order-2 order-lg-1 d-flex justify-content-center align-items-center">
 
                     <a href="#">
                         <img
@@ -95,7 +95,7 @@
                     </a>
                 </div>
 
-                <div class="col-4 d-flex justify-content-end align-items-center">
+                <div class="col-lg-4 order-1 order-lg-2 d-flex justify-content-center justify-content-lg-end align-items-center my-4 my-lg-0">
 
                     <ul class="d-flex mb-0 pl-0">
 

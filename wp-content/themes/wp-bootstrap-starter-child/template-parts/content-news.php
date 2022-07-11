@@ -7,7 +7,7 @@
             <div class="col-12 mb-5">
 
                 <h2 class="c-title-pattern u-font-weight-semibold text-center u-color-folk-dark-blue mb-0 pb-2">
-                    <span class="u-font-size-15 xxl:u-font-size-19 u-font-weight-regular u-font-family-lato u-color-dark-blue">Fique informado!</span> <br>
+                    <span class="u-font-size-15 xxl:u-font-size-22 u-font-weight-regular u-font-family-lato u-color-dark-blue">Fique informado!</span> <br>
                     Últimas Notícias
                 </h2>
             </div>
@@ -18,7 +18,7 @@
                         
                     <!-- loop -->
                     <?php for( $i = 0; $i < 3; $i++ ) { ?>
-                        <div class="col-4">
+                        <div class="col-md-4">
 
                             <a 
                             class="card border-0 text-decoration-none"
@@ -43,17 +43,17 @@
 
                                 <div class="card-body">
                                     
-                                    <p class="u-font-size-14 xxl:u-font-size-18 u-font-weight-semibold u-color-folk-cyan-blue mb-0">
+                                    <p class="u-font-size-14 u-font-weight-semibold u-color-folk-cyan-blue mb-0">
                                         31 de maio de 2021  
                                     </p>
 
-                                    <h4 class="u-font-size-18 u-font-weight-bold u-color-folk-dark-grayish-navy">
+                                    <h4 class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-color-folk-dark-grayish-navy">
                                         Celebração dos 9 anos do 
                                         Centro Âncora com Dom 
                                         José Antônio Peruzzo
                                     </h4>
 
-                                    <p class="u-font-size-13 u-font-weight-regular u-color-folk-aluminium">
+                                    <p class="u-font-size-13 xxl:u-font-size-16 u-font-weight-regular u-color-folk-aluminium">
                                         No último dia 28 de Maio tivemos a alegria
                                         de receber em nossa casa Dom José Antônio 
                                         Peruzzo para celebrarmos os 9 anos de  [...]

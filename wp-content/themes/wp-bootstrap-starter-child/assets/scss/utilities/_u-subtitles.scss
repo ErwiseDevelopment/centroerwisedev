@@ -3,5 +3,9 @@ $utility-name: 'u-subtitle';
 .#{$utility-name} {
     &-pattern {
         font-size: 1.375rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.8125rem;
+        }
     }
 }

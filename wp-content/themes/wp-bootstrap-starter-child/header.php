@@ -52,11 +52,11 @@
 
             <nav class="l-navbar navbar navbar-expand-xl justify-content-center p-0">
 
-                <div class="col-2">
+                <div class="col-8 col-md-2 mb-3 mb-md-0">
                     <div class="navbar-brand">
                         <?php if ( get_theme_mod( 'wp_bootstrap_starter_logo' ) ): ?>
                             <a href="<?php echo esc_url( home_url( '/' )); ?>">
-                                <img style="width:150px;height:124px" src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+                                <img class="l-navbar__brand" src="<?php echo esc_url(get_theme_mod( 'wp_bootstrap_starter_logo' )); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
                             </a>
                         <?php else : ?>
                             <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
@@ -65,7 +65,7 @@
                     </div>
                 </div>
 
-                <div class="col-9">
+                <div class="col-md-9">
 
                     <div class="row">
 
@@ -73,11 +73,11 @@
                             
                             <div class="row justify-content-between">
 
-                                <div class="col-7">
+                                <div class="col-lg-7 order-2 order-lg-1">
 
-                                    <ul class="d-flex mb-0 pl-0">
+                                    <ul class="d-lg-flex mb-0 pl-0">
 
-                                        <li class="u-list-style-none">
+                                        <li class="u-list-style-none my-3 my-lg-0">
 
                                             <a 
                                             class="d-flex align-items-center text-decoration-none" 
@@ -92,7 +92,7 @@
                                             </a>
                                         </li>
 
-                                        <li class="u-list-style-none ml-3">
+                                        <li class="u-list-style-none my-3 my-lg-0 ml-lg-3">
 
                                             <a 
                                             class="d-flex align-items-center text-decoration-none" 
@@ -109,7 +109,7 @@
                                     </ul>
                                 </div>
 
-                                <div class="col-3">
+                                <div class="col-lg-3 d-flex justify-content-between justify-content-lg-start order-1 order-lg-2">
 
                                     <ul class="d-flex mb-0 pl-0">
 
@@ -133,6 +133,10 @@
                                             </a>
                                         </li>
                                     </ul>
+
+                                    <span class="u-icon__free u-icon__search d-block d-lg-none u-font-size-0 before::u-font-size-22 u-font-weight-semibold u-color-folk-medium-electric-blue hover:u-color-folk-golden js-search">
+                                        Pesquisar
+                                    </span>
                                 </div>
                             </div>
 
@@ -154,7 +158,7 @@
                                 ));
                             ?>
 
-                            <span class="u-icon__free u-icon__search before::u-font-size-40 u-font-weight-semibold u-color-folk-black u-cursor-pointer u-color-folk-aluminium js-search"></span>
+                            <span class="u-icon__free u-icon__search d-none d-lg-block before::u-font-size-40 u-font-weight-semibold u-color-folk-black u-cursor-pointer u-color-folk-aluminium js-search"></span>
                         </div>
                     </div>
                 </div>
@@ -175,9 +179,9 @@
 
                         <form method="GET" action="<?php echo get_home_url( null, '/' ) ?>">
  
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-lg-center">
 
-                                <div class="col-8">
+                                <div class="col-10 col-lg-8 order-1">
                                     <input
                                     class="w-100 border-0 shadow rounded d-block u-font-size-14 u-font-weight-regular u-font-style-italic u-color-folk-aluminium py-2 px-3"
                                     type="search"
@@ -185,14 +189,14 @@
                                     placeholder="Pesquisar...">
                                 </div>
 
-                                <div class="col-2">
+                                <div class="col-10 col-lg-2 order-3 order-lg-2 mt-3 mt-lg-0">
                                     <input
                                     class="w-100 border rounded d-block u-font-size-14 u-font-weight-bold text-center u-color-folk-white u-bg-folk-dark-blue hover:u-bg-folk-golden py-2 px-3"
                                     type="submit"
                                     value="Pesquisar">
                                 </div>
 
-                                <div class="col-1 d-flex align-items-center pl-0">
+                                <div class="col-1 order-2 order-lg-3 d-flex align-items-center pl-0">
                                     <span class="u-icon__free u-icon__close u-font-size-20 u-font-weight-bold u-color-folk-dark-blue u-cursor-pointer hover:u-color-folk-golden js-search-close"></span>
                                 </div>
                             </div>

@@ -7,7 +7,7 @@
             <div class="col-12 mb-5">
 
                 <h2 class="c-title-pattern u-font-weight-semibold text-center u-color-folk-dark-blue mb-0 pb-2">
-                    <span class="u-font-size-15 xxl:u-font-size-19 u-font-weight-regular u-font-family-lato u-color-dark-blue">Conheça nossa</span> <br>
+                    <span class="u-font-size-15 xxl:u-font-size-22 u-font-weight-regular u-font-family-lato u-color-dark-blue">Conheça nossa</span> <br>
                     Equipe
                 </h2>
             </div>
@@ -32,7 +32,7 @@
                                         Ir. Adenise Somer
                                     </h6>
 
-                                    <p class="u-font-size-15 u-font-weight-regular u-color-folk-aluminium">
+                                    <p class="u-font-size-15 xxl:u-font-size-18 u-font-weight-regular u-color-folk-aluminium">
                                         Diretora Presidente
                                     </p>
                                 </div>
@@ -43,8 +43,8 @@
                 </div>
                         
                 <!-- arrows -->
-                <div class="swiper-button-prev swiper-button-prev-team js-swiper-button-prev-team"></div>
-                <div class="swiper-button-next swiper-button-next-team js-swiper-button-next-team"></div>
+                <div class="swiper-button-prev swiper-button-prev-team d-none d-lg-flex js-swiper-button-prev-team"></div>
+                <div class="swiper-button-next swiper-button-next-team d-none d-lg-flex js-swiper-button-next-team"></div>
                 <!-- end swiper -->
             </div>
         </div>

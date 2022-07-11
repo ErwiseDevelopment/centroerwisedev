@@ -7,7 +7,7 @@
             <div class="col-12 mb-5">
 
                 <h2 class="c-title-pattern u-font-weight-semibold text-center u-color-folk-dark-blue mb-0 pb-2">
-                    <span class="u-font-size-15 xxl:u-font-size-19 u-font-weight-regular u-font-family-lato u-color-dark-blue">Aprofunde-se com nossos</span> <br>
+                    <span class="u-font-size-15 xxl:u-font-size-22 u-font-weight-regular u-font-family-lato u-color-dark-blue">Aprofunde-se com nossos</span> <br>
                     Conteúdos
                 </h2>
             </div>
@@ -18,7 +18,7 @@
                         
                     <!-- loop -->
                     <?php for( $i = 0; $i < 4; $i++ ) { ?>
-                        <div class="col-3">
+                        <div class="col-md-6 col-lg-3 my-3 my-lg-0">
 
                             <a 
                             class="card border-0 text-decoration-none"
@@ -43,11 +43,11 @@
 
                                 <div class="card-body">
                                     
-                                    <p class="u-font-size-14 xxl:u-font-size-18 u-font-weight-semibold u-color-folk-cyan-blue mb-0">
+                                    <p class="u-font-size-14 xxl:u-font-size-16 u-font-weight-semibold u-color-folk-cyan-blue mb-0">
                                         Evangelização
                                     </p>
 
-                                    <h4 class="u-font-size-18 u-font-weight-bold u-color-folk-dark-grayish-navy">
+                                    <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-color-folk-dark-grayish-navy">
                                         O que Deus 
                                         quer neste 
                                         novo ano?
@@ -58,7 +58,7 @@
                                         <div class="col-6 mt-3">
 
                                             <p
-                                            class="w-100 u-box-shadow-pattern u-font-size-12 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-dark-blue hover:u-bg-folk-golden py-2">
+                                            class="w-100 u-box-shadow-pattern u-font-size-12 xxl:u-font-size-14 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-dark-blue hover:u-bg-folk-golden py-2">
                                                 Ler mais
                                             </p>
                                         </div>

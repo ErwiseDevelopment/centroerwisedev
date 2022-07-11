@@ -1,6 +1,16 @@
 $layout-name: 'l-navbar';
 
 .#{$layout-name} {
+    &__brand {
+        width: 150px;
+        height: 124px;
+
+        @media screen and (max-width: 991px) {
+            width: 100%;
+            height: auto;
+        }
+    }
+
     .nav-item {
         margin-right: 1rem;
         position: relative;

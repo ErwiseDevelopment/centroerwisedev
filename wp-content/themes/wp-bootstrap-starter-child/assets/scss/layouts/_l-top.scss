@@ -3,8 +3,18 @@ $layout-name: 'l-top';
 .#{$layout-name} {
     background-image: linear-gradient(to right, $color-folk-dark-blue 50%, $color-folk-light-blue 50%);
 
+    @media screen and (max-width: 991px) {
+        background-image: linear-gradient(to right, $color-folk-light-blue 50%, $color-folk-light-blue 50%);
+    }
+
     &__item {
         position: relative;
+
+        @media screen and (max-width: 575px) {
+            width: 50%;
+            max-width: 100%;
+            flex: 0 0 50%;
+        }
 
         &:nth-of-type(1) {
             background-color: #0B2139;
