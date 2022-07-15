@@ -1,25 +1,56 @@
 $layout-name: 'l-about';
 
 .#{$layout-name} {
-    position: relative;
-    background-color: $color-folk-extra-light-gray;
+    &__miniature {
+        overflow: hidden;
 
-    &::before {
-        content: '';
-        width: 25%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        position: absolute;
-        background-color: $color-folk-dark-blue;
-        z-index: 0;
-
-        @media screen and (min-width: 1600px) {
-            width: 30%;
+        img {
+            transform: scale(1.1);
+            transition: all .4s;
         }
 
-        @media screen and (max-width: 991px) {
-            display: none;
+        &:hover {
+            img {
+                transform: scale(1.3);
+            }
         }
     }
+
+    &__title {
+        font-size: 1.375rem;
+
+        @media screen and (min-width: 1600px) {
+            font-size: 1.8125rem;
+        }
+
+        &-highlight {
+            font-size: 2.625rem;
+
+            @media screen and (min-width: 1600px) {
+                font-size: 3.5rem;
+            }
+        }
+    }
+
+    // position: relative;
+    // background-color: $color-folk-extra-light-gray;
+
+    // &::before {
+    //     content: '';
+    //     width: 25%;
+    //     height: 100%;
+    //     top: 0;
+    //     left: 0;
+    //     position: absolute;
+    //     background-color: $color-folk-dark-blue;
+    //     z-index: 0;
+
+    //     @media screen and (min-width: 1600px) {
+    //         width: 30%;
+    //     }
+
+    //     @media screen and (max-width: 991px) {
+    //         display: none;
+    //     }
+    // }
 }
