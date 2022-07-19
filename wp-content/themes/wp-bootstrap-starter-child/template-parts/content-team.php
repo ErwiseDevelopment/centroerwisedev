@@ -20,24 +20,64 @@
                     <div class="swiper-wrapper">
 
                         <!-- slide -->
-                        <?php for( $i = 0; $i < 6; $i++ ) { ?>
-                            <div class="swiper-slide flex-column align-items-start">
-                                <img
-                                class="img-fluid w-100"
-                                src="http://ancora.test/wp-content/uploads/2022/07/Ir-Adenise-Somer-Diretora-Presidente.png"
-                                alt="">
+                        <?php 
+                                    $editorial_slug_current = 'Equipe';
+                                    $editorial_id_current = 27;
 
-                                <div class="mt-3">
+                                    $args = array(
+                                        'posts_per_page' => -1,
+                                        'post_type'      => 'Equipe',
+                                        'order'          => 'DESC',
+                                        'tax_query'      => array(
+                                            array(
+                                                'taxonomy' => 'funcao',
+                                                'field'    => 'slug',
+                                                'terms'    => array( $editorial_slug_current )
+                                            )
+                                        )
+                                    );
+
+                                    $communities = new WP_Query( $args );
+
+                                    if( $communities->have_posts() ) :  
+                                        while( $communities->have_posts() ) : $communities->the_post();
+                                ?>
+                            <div class="swiper-slide flex-column align-items-start">
+                            <?php
+                                                   $alt_title = get_the_title();
+
+                                                    the_post_thumbnail( 'post-thumbnail',
+                                                        array(
+                                                            'class' => 'img-fluid w-100',
+                                                            'alt'   => $alt_title
+                                                    ));
+                                                ?>    
+                             <?php 
+                                        endwhile;
+                                    endif;
+                                ?>
+                                   <div class="mt-3">
                                     <h6 class="u-font-size-22 u-font-weight-bold u-color-folk-dark-grayish-navy mb-0">
-                                        Ir. Adenise Somer
+                                     <?php the_title() ?>
                                     </h6>
 
                                     <p class="u-font-size-15 xxl:u-font-size-18 u-font-weight-regular u-color-folk-aluminium">
-                                        Diretora Presidente
+                                    <?php
+                                                                $terms = get_the_terms(get_the_ID(), 'funcao' );
+                                                                
+                                                                // foreach( $terms as $term ) {
+                                                                //     if( $term->slug == $editorial_slug_current )
+                                                                //         echo $term->name; 
+                                                                // }
+                                                            ?>
                                     </p>
                                 </div>
                             </div>
-                        <?php } ?>
+                            <?php 
+                                    
+                                        
+                                        wp_reset_query();
+                                    ?>
                         <!-- end slide -->
                     </div>
                 </div>
