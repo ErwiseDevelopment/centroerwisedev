@@ -1876,6 +1876,9 @@ button.swiper-pagination-bullet {
       .l-about__title-highlight {
         font-size: 3.5rem; } }
 
+.l-news__card-img {
+  height: 290px; }
+
 .l-items .card:hover img {
   transform: translateY(-10px); }
 .l-items .card img {
@@ -1933,12 +1936,10 @@ button.swiper-pagination-bullet {
       opacity: 1;
       visibility: visible; }
 .l-template-menu__content h2, .l-template-menu__content h3, .l-template-menu__content h4, .l-template-menu__content h5, .l-template-menu__content h6 {
-  font-weight: 800;
-  color: #255777; }
+  font-weight: 800; }
 .l-template-menu__content p {
   font-size: .875rem;
-  text-align: justify;
-  color: #828690; }
+  text-align: justify; }
   @media screen and (min-width: 1600px) {
     .l-template-menu__content p {
       font-size: 1.125rem; } }

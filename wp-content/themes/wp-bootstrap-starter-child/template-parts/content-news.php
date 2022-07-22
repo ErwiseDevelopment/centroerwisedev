@@ -1,4 +1,4 @@
-<section class="py-5">
+<section class="l-news py-5">
 
     <div class="container">
 
@@ -21,6 +21,7 @@
                         $link_pattern = get_field( 'link_padrao_portal', 'option' );
                         $post_link = $link_pattern . get_field( 'link_noticia', 'option' );
                         $request_posts = wp_remote_get( $post_link );
+                        $count = 0;
 
                         if(!is_wp_error( $request_posts )) :
                             $body = wp_remote_retrieve_body( $request_posts );
@@ -28,33 +29,19 @@
 
                             if(!is_wp_error( $data )) :
                                 foreach( $data as $rest_post ) :
+                                    $count++;
                     ?>
                                     <div class="col-md-4">
 
                                         <a 
                                         class="card border-0 text-decoration-none"
-                                        href="#">
+                                        href="<?php echo esc_url( $rest_post->link ); ?>">
 
-                                            <div class="card-img">
-                                                <!-- <img
-                                                class="l-special-content__thumbnail img-fluid w-100 u-object-fit-cover"
-                                                src="https://copiosa.erwisedev-hml.com.br/wp-content/uploads/2022/07/verocohen-1636747305484-cathopic-1.jpg"
-                                                alt=""> -->
-
+                                            <div class="l-news__card-img card-img">
                                                 <img
-                                                class="l-special-content__thumbnail img-fluid w-100 u-object-fit-cover"
+                                                class=" img-fluid w-100 h-100 u-object-fit-cover"
                                                 src="<?php echo $rest_post->featured_image_src; ?>"
                                                 alt="<?php echo $rest_post->title->rendered; ?>">
-
-                                                <!--
-                                                    $alt_title = get_the_title();
-
-                                                    the_post_thumbnail( 'post-thubmnail',
-                                                        array(
-                                                            'class' => 'l-special-content__thumbnail img-fluid w-100 u-object-fit-cover',
-                                                            'alt'   => $alt_title
-                                                        ));
-                                                -->
                                             </div>
 
                                             <div class="card-body">
@@ -63,10 +50,12 @@
                                                     <!-- 31 de maio de 2021   -->
                                                     <?php 
                                                         $data = $rest_post->post_date;
-                                                        list($data_day, $data_month, $data_year) = explode("/", $data);
-                                                        $data_long_month = get_date_format( $data_month );
+                                                        //echo 'Data: ' . $rest_post->post_date . '<br>';
 
-                                                        echo $data_day . ' de ' . $data_long_month . ' de ' . $data_year;  
+                                                        //list($data_day, $data_month, $data_year) = explode("/", $data);
+                                                        $data_format = get_date_format( $data );
+
+                                                        echo $data_format;  
                                                     ?>
                                                 </p>
 
@@ -98,6 +87,8 @@
                                         </a>  
                                     </div>
                     <?php
+                                    if( $count == 3 )
+                                        break;
                                 endforeach;
                             endif;
                         endif;
@@ -114,7 +105,7 @@
 
                         <a
                         class="w-100 u-box-shadow-pattern d-flex justify-content-center align-items-center u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-cyan-blue hover:u-bg-folk-golden py-3"
-                        href="<?php echo get_home_url( null, 'noticias' ) ?>">
+                        href="<?php echo $link_pattern . 'noticias/?cat=centro-ancora'; ?>">
                             Ver mais
                         </a>
                     </div>
