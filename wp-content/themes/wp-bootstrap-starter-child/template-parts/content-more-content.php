@@ -46,7 +46,7 @@
                                             <div class="card-body">
                                                 
                                                 <p class="u-font-size-14 xxl:u-font-size-16 u-font-weight-semibold u-color-folk-cyan-blue mb-0">
-                                                    Evangelização
+                                                    Blog
                                                 </p>
 
                                                 <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-color-folk-dark-grayish-navy">
