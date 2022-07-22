@@ -21,9 +21,7 @@
                         $link_pattern = get_field( 'link_padrao_portal', 'option' );
                         $post_link = $link_pattern . get_field( 'link_conteudos_especiais', 'option' );
                         $request_posts = wp_remote_get( $post_link );
-                        $category_news = get_field( 'categoria_noticia', 'option' );
                         $count = 0;
-                        $categories = array();
 
                         if(!is_wp_error( $request_posts )) :
                             $body = wp_remote_retrieve_body( $request_posts );
@@ -31,60 +29,44 @@
 
                             if(!is_wp_error( $data )) :
                                 foreach( $data as $rest_post ) :
-                                    foreach( $rest_post->child_category as $category )
-                                        array_push( $categories, $category );
-                                    
-                                    if ( sizeOf($categories) > 0 )
-                                        $post_categories = implode(', ', $categories);
-                                        
-                                    if( !preg_match("/{$category_news}/i", $post_categories) ) :  
                     ?>
-                                        <div class="col-md-6 col-lg-3 my-3 my-lg-0">
+                                    <div class="col-md-6 col-lg-3 my-3 my-lg-0">
 
-                                            <a 
-                                            class="card border-0 text-decoration-none"
-                                            href="<?php echo esc_url( $rest_post->link ); ?>">
+                                        <a 
+                                        class="card border-0 text-decoration-none"
+                                        href="<?php echo esc_url( $rest_post->link ); ?>">
 
-                                                <div class="l-news__card-img card-img">
-                                                    <!-- <img
-                                                    class="l-special-content__thumbnail img-fluid w-100 u-object-fit-cover"
-                                                    src="https://copiosa.erwisedev-hml.com.br/wp-content/uploads/2022/07/verocohen-1636747305484-cathopic-1.jpg"
-                                                    alt=""> -->
+                                            <div class="l-news__card-img card-img">
+                                                <img
+                                                class=" img-fluid w-100 h-100 u-object-fit-cover"
+                                                src="<?php echo $rest_post->featured_image_src; ?>"
+                                                alt="<?php echo $rest_post->title->rendered; ?>">
+                                            </div>
 
-                                                    <img
-                                                    class=" img-fluid w-100 h-100 u-object-fit-cover"
-                                                    src="<?php echo $rest_post->featured_image_src; ?>"
-                                                    alt="<?php echo $rest_post->title->rendered; ?>">
-                                                </div>
+                                            <div class="card-body">
+                                                
+                                                <p class="u-font-size-14 xxl:u-font-size-16 u-font-weight-semibold u-color-folk-cyan-blue mb-0">
+                                                    Evangelização
+                                                </p>
 
-                                                <div class="card-body">
-                                                    
-                                                    <p class="u-font-size-14 xxl:u-font-size-16 u-font-weight-semibold u-color-folk-cyan-blue mb-0">
-                                                        Evangelização
-                                                    </p>
+                                                <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-color-folk-dark-grayish-navy">
+                                                    <?php echo $rest_post->title->rendered; ?>
+                                                </h4>
 
-                                                    <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-color-folk-dark-grayish-navy">
-                                                        <!-- O que Deus 
-                                                        quer neste 
-                                                        novo ano? -->
-                                                        <?php echo $rest_post->title->rendered; ?>
-                                                    </h4>
+                                                <div class="row">
 
-                                                    <div class="row">
+                                                    <div class="col-6 mt-3">
 
-                                                        <div class="col-6 mt-3">
-
-                                                            <p
-                                                            class="w-100 u-box-shadow-pattern u-font-size-12 xxl:u-font-size-14 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-dark-blue hover:u-bg-folk-golden py-2">
-                                                                Ler mais
-                                                            </p>
-                                                        </div>
+                                                        <p
+                                                        class="w-100 u-box-shadow-pattern u-font-size-12 xxl:u-font-size-14 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-dark-blue hover:u-bg-folk-golden py-2">
+                                                            Ler mais
+                                                        </p>
                                                     </div>
                                                 </div>
-                                            </a>  
-                                        </div>
+                                            </div>
+                                        </a>  
+                                    </div>
                     <?php
-                                    endif;
 
                                     if( $count == 4 ) 
                                         break;
