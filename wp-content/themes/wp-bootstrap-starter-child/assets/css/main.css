@@ -1938,8 +1938,7 @@ button.swiper-pagination-bullet {
 .l-template-menu__content h2, .l-template-menu__content h3, .l-template-menu__content h4, .l-template-menu__content h5, .l-template-menu__content h6 {
   font-weight: 800; }
 .l-template-menu__content p {
-  font-size: .875rem;
-  text-align: justify; }
+  font-size: .875rem; }
   @media screen and (min-width: 1600px) {
     .l-template-menu__content p {
       font-size: 1.125rem; } }
