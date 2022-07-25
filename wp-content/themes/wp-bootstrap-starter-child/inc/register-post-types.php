@@ -11,15 +11,6 @@ function erwise_create_post_type() {
 		'menu_icon'		=> 'dashicons-groups',
 		'supports' 		=> array( 'title', 'thumbnail' ) 
 	) );
-
-	// register_post_type( 'depoimentos', array(
-	// 	'labels' 		=> array( 'name' => 'Depoimentos', 'singular_name' => 'Depoimento', 'all_items' => 'Categorias' ),
-	// 	'public' 		=> true,
-	// 	'has_archive'	=> true,
-	// 	'menu_icon'		=> 'dashicons-format-quote',
-	// 	'supports' 		=> array( 'title', 'editor', 'thumbnail' ) 
-	// ) );
-	
 }
 add_action( 'init', 'erwise_create_post_type' );
 

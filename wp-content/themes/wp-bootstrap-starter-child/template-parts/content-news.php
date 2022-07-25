@@ -1,4 +1,4 @@
-<section class="py-5">
+<section class="l-news py-5">
 
     <div class="container">
 
@@ -17,62 +17,73 @@
                 <div class="row">
                         
                     <!-- loop -->
-                    <?php for( $i = 0; $i < 3; $i++ ) { ?>
-                        <div class="col-md-4">
+                    <?php
+                        $link_pattern = get_field( 'link_padrao_portal', 'option' );
+                        $post_link = $link_pattern . get_field( 'link_noticia', 'option' );
+                        $request_posts = wp_remote_get( $post_link );
+                        $count = 0;
 
-                            <a 
-                            class="card border-0 text-decoration-none"
-                            href="#">
+                        if(!is_wp_error( $request_posts )) :
+                            $body = wp_remote_retrieve_body( $request_posts );
+                            $data = json_decode( $body );
 
-                                <div class="card-img">
-                                    <img
-                                    class="l-special-content__thumbnail img-fluid w-100 u-object-fit-cover"
-                                    src="https://copiosa.erwisedev-hml.com.br/wp-content/uploads/2022/07/verocohen-1636747305484-cathopic-1.jpg"
-                                    alt="">
+                            if(!is_wp_error( $data )) :
+                                foreach( $data as $rest_post ) :
+                                    $count++;
+                    ?>
+                                    <div class="col-md-4">
 
-                                    <!--
-                                        $alt_title = get_the_title();
+                                        <a 
+                                        class="card border-0 text-decoration-none"
+                                        href="<?php echo esc_url( $rest_post->link ); ?>">
 
-                                        the_post_thumbnail( 'post-thubmnail',
-                                            array(
-                                                'class' => 'l-special-content__thumbnail img-fluid w-100 u-object-fit-cover',
-                                                'alt'   => $alt_title
-                                            ));
-                                    -->
-                                </div>
+                                            <div class="l-news__card-img card-img">
+                                                <img
+                                                class=" img-fluid w-100 h-100 u-object-fit-cover"
+                                                src="<?php echo $rest_post->featured_image_src; ?>"
+                                                alt="<?php echo $rest_post->title->rendered; ?>">
+                                            </div>
 
-                                <div class="card-body">
-                                    
-                                    <p class="u-font-size-14 u-font-weight-semibold u-color-folk-cyan-blue mb-0">
-                                        31 de maio de 2021  
-                                    </p>
+                                            <div class="card-body">
+                                                
+                                                <p class="u-font-size-14 u-font-weight-semibold u-color-folk-cyan-blue mb-0">
+                                                    <?php 
+                                                        $data = $rest_post->post_date;
+                                                        $data_format = get_date_format( $data );
 
-                                    <h4 class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-color-folk-dark-grayish-navy">
-                                        Celebração dos 9 anos do 
-                                        Centro Âncora com Dom 
-                                        José Antônio Peruzzo
-                                    </h4>
+                                                        echo $data_format;  
+                                                    ?>
+                                                </p>
 
-                                    <p class="u-font-size-13 xxl:u-font-size-16 u-font-weight-regular u-color-folk-aluminium">
-                                        No último dia 28 de Maio tivemos a alegria
-                                        de receber em nossa casa Dom José Antônio 
-                                        Peruzzo para celebrarmos os 9 anos de  [...]
-                                    </p>
+                                                <h4 class="u-font-size-18 xxl:u-font-size-20 u-font-weight-bold u-color-folk-dark-grayish-navy">
+                                                    <?php echo $rest_post->title->rendered; ?>
+                                                </h4>
 
-                                    <div class="row">
+                                                <p class="u-font-size-13 xxl:u-font-size-16 u-font-weight-regular u-color-folk-aluminium">
+                                                    <?php echo $rest_post->post_excerpt; ?>
+                                                </p>
 
-                                        <div class="col-6 mt-3">
+                                                <div class="row">
 
-                                            <p
-                                            class="w-100 u-box-shadow-pattern u-font-size-12 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-dark-blue hover:u-bg-folk-golden py-2">
-                                                Ler mais
-                                            </p>
-                                        </div>
+                                                    <div class="col-6 mt-3">
+
+                                                        <p
+                                                        class="w-100 u-box-shadow-pattern u-font-size-12 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-dark-blue hover:u-bg-folk-golden py-2">
+                                                            Ler mais
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>  
                                     </div>
-                                </div>
-                            </a>  
-                        </div>
-                    <?php } ?>
+                    <?php
+                                            
+                                    if( $count == 3 )
+                                            break;
+                                endforeach;
+                            endif;
+                        endif;
+                    ?>
                     <!-- end loop -->
                 </div>
             </div>
@@ -85,7 +96,7 @@
 
                         <a
                         class="w-100 u-box-shadow-pattern d-flex justify-content-center align-items-center u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-cyan-blue hover:u-bg-folk-golden py-3"
-                        href="<?php echo get_home_url( null, 'noticias' ) ?>">
+                        href="<?php echo $link_pattern . 'noticias/?cat=centro-ancora'; ?>">
                             Ver mais
                         </a>
                     </div>

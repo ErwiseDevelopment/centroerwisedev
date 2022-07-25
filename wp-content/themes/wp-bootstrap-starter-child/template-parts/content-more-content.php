@@ -19,51 +19,38 @@
                     <!-- loop -->
                     <?php
                         $link_pattern = get_field( 'link_padrao_portal', 'option' );
-                        $post_content_link = $link_pattern . get_field( 'link_conteudos_especiais', 'option' );
-                        $request_posts = wp_remote_get( $post_content_link );
+                        $post_link = $link_pattern . get_field( 'link_conteudos_especiais', 'option' );
+                        $request_posts = wp_remote_get( $post_link );
+                        $count = 0;
 
                         if(!is_wp_error( $request_posts )) :
                             $body = wp_remote_retrieve_body( $request_posts );
                             $data = json_decode( $body );
-                            // $count = 0;
 
                             if(!is_wp_error( $data )) :
                                 foreach( $data as $rest_post ) :
-                                    // $count++;
                     ?>
                                     <div class="col-md-6 col-lg-3 my-3 my-lg-0">
 
                                         <a 
                                         class="card border-0 text-decoration-none"
-                                        href="#">
+                                        href="<?php echo esc_url( $rest_post->link ); ?>">
 
-                                            <div class="card-img">
+                                            <div class="l-news__card-img card-img">
                                                 <img
-                                                class="l-special-content__thumbnail img-fluid w-100 u-object-fit-cover"
-                                                src="https://copiosa.erwisedev-hml.com.br/wp-content/uploads/2022/07/verocohen-1636747305484-cathopic-1.jpg"
-                                                alt="">
-
-                                                <!--
-                                                    $alt_title = get_the_title();
-
-                                                    the_post_thumbnail( 'post-thubmnail',
-                                                        array(
-                                                            'class' => 'l-special-content__thumbnail img-fluid w-100 u-object-fit-cover',
-                                                            'alt'   => $alt_title
-                                                        ));
-                                                -->
+                                                class=" img-fluid w-100 h-100 u-object-fit-cover"
+                                                src="<?php echo $rest_post->featured_image_src; ?>"
+                                                alt="<?php echo $rest_post->title->rendered; ?>">
                                             </div>
 
                                             <div class="card-body">
                                                 
                                                 <p class="u-font-size-14 xxl:u-font-size-16 u-font-weight-semibold u-color-folk-cyan-blue mb-0">
-                                                    Evangelização
+                                                    Blog
                                                 </p>
 
                                                 <h4 class="u-font-size-18 xxl:u-font-size-22 u-font-weight-bold u-color-folk-dark-grayish-navy">
-                                                    O que Deus 
-                                                    quer neste 
-                                                    novo ano?
+                                                    <?php echo $rest_post->title->rendered; ?>
                                                 </h4>
 
                                                 <div class="row">
@@ -80,8 +67,9 @@
                                         </a>  
                                     </div>
                     <?php
-                                    // if( $count == 3 )
-                                    //     break;
+
+                                    if( $count == 4 ) 
+                                        break;
                                 endforeach;
                             endif;
                         endif;
@@ -98,7 +86,7 @@
 
                         <a
                         class="w-100 u-box-shadow-pattern d-flex justify-content-center align-items-center u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-cyan-blue hover:u-bg-folk-golden py-3"
-                        href="<?php echo get_home_url( null, 'conteudos' ) ?>">
+                        href="<?php echo $link_pattern . 'blog'; ?>">
                             Ver mais
                         </a>
                     </div>
