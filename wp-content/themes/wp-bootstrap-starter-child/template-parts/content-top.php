@@ -16,7 +16,7 @@
                         rel="noreferrer noopener">
                             <img
                             class="img-fluid"
-                            src="<?php echo get_home_url( null, '/wp-content/uploads/2022/07/logo-topo.png' ); ?>">
+                            src="<?php echo get_home_url( null, '/wp-content/uploads/2022/07/logo-topo-e1658779809212.png' ); ?>">
                         </a>
                     </div>
 
