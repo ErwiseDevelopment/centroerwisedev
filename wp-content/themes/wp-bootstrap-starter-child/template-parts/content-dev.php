@@ -5,7 +5,7 @@
         <div class="col-lg-8 d-flex align-items-center">
             <p class="u-line-height-100 u-font-weight-semibold text-center text-md-left text-uppercase u-color-folk-white mb-0" style="font-size: 13px;">
                 <a class="text-decoration-none u-color-folk-white" href="<?php echo get_home_url( null, '/' ) ?>"><?php echo get_bloginfo( 'name' ) ?></a>
-                <?php echo ' © ' . date('Y') . 'Todos os direitos reservados.'; ?> 
+                <?php echo ' © ' . date('Y') . ' Todos os direitos reservados.'; ?> 
             </p>
         </div>
 

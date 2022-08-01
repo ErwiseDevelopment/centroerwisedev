@@ -54,23 +54,21 @@
                             <div class="d-flex mb-4">
                                 <span class="u-icon__free u-icon__local before::u-font-size-14 u-font-weight-bold u-color-folk-light-gray"></span>
                                 <p class="u-font-size-14 u-font-weight-regular u-color-folk-light-gray pl-2">
-                                    Rua Rio Paraná, 639 – Jardim Weissópolis <br>
-                                    Pinhais – PR – Cep: 83.322-000
+                                <?php echo get_field('endereco', 'option')?> 
                                 </p>
                             </div>
 
                             <div class="d-flex mb-3">
                                 <span class="u-icon__free u-icon__phone before::u-font-size-14 u-font-weight-bold u-color-folk-light-gray"></span>
                                 <p class="u-font-size-14 u-font-weight-regular u-color-folk-light-gray pl-2">
-                                    (41) 3667-6564 | (41) 99783-5230 (Cristiane) <br>
-                                    (41) 99574-2192 (Ir. Adenise)
+                                <?php echo get_field('telefone_rodape', 'option')?>
                                 </p>
                             </div>
 
                             <div class="d-flex">
                                 <span class="u-icon__free u-icon__envelope before::u-font-size-14 u-font-weight-bold u-color-folk-light-gray"></span>
                                 <p class="u-font-size-14 u-font-weight-regular u-color-folk-light-gray pl-2">
-                                    centroancora@copiosaredencao.org.br
+                                <?php echo get_field('email_footer', 'option')?>
                                 </p>
                             </div>
                         </div>
@@ -102,7 +100,7 @@
                         <li class="u-list-style-none">
                             <a
                             class="px:u-w-40 px:u-h-40 u-icon__brands u-icon__facebook-square hover:u-opacity-8 d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-15 u-font-weight-bold text-decoration-none u-color-folk-white u-bg-folk-facebook"
-                            href="#"
+                            href="<?php echo get_field('facebook', 'option')?>"
                             target="_blank"
                             rel="noreferrer noopener">
                                 Link do Facebook
@@ -112,7 +110,7 @@
                         <li class="u-list-style-none mx-3">
                             <a
                             class="px:u-w-40 px:u-h-40 u-icon__brands u-icon__youtube hover:u-opacity-8 d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-15 u-font-weight-bold text-decoration-none u-color-folk-white u-bg-folk-youtube"
-                            href="#"
+                            href="<?php echo get_field('youtube', 'option')?>"
                             target="_blank"
                             rel="noreferrer noopener">
                                 Link do Youtube
@@ -122,7 +120,7 @@
                         <li class="u-list-style-none">
                             <a
                             class="px:u-w-40 px:u-h-40 u-icon__brands u-icon__instagram hover:u-opacity-8 d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-15 u-font-weight-bold text-decoration-none u-color-folk-white u-bg-folk-instagram"
-                            href="#"
+                            href="<?php echo get_field('instagram', 'option')?>"
                             target="_blank"
                             rel="noreferrer noopener">
                                 Link do instagram
