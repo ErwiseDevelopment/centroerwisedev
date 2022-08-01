@@ -81,7 +81,7 @@
 
                                             <a 
                                             class="d-flex align-items-center text-decoration-none" 
-                                            href="maito:" . <?php echo get_field('email_link')?>>
+                                            href="mailto:<?php echo get_field('email_link', 'option')?>">
                                                 <span class="px:u-w-25 px:u-h-25 rounded-pill u-icon__free u-icon__envelope d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-14 u-font-weight-semibold u-color-folk-white u-bg-folk-medium-electric-blue">
                                                     Envelope
                                                 </span>

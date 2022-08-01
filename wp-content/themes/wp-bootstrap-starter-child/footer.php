@@ -37,11 +37,11 @@
 
                         <div class="col-8 col-lg-3 mb-5 mb-lg-0">
 
-                            <a href="#">
+                            <a href="<?php echo get_home_url(null, '/')?>">
                                 <img
                                 class="img-fluid"
-                                src="<?php echo get_home_url( null, '/wp-content/uploads/2022/07/LOGO-Alta-resolucao-branco.png' ) ?>"
-                                alt="">
+                                src="<?php echo get_field('logo_rodape', 'option') ?>"
+                                alt="logo">
                             </a>
                         </div>
 
@@ -53,23 +53,23 @@
 
                             <div class="d-flex mb-4">
                                 <span class="u-icon__free u-icon__local before::u-font-size-14 u-font-weight-bold u-color-folk-light-gray"></span>
-                                <p class="u-font-size-14 u-font-weight-regular u-color-folk-light-gray pl-2">
+                                <span class="u-font-size-14 u-font-weight-regular u-color-folk-light-gray pl-2 d-block">
                                 <?php echo get_field('endereco', 'option')?> 
-                                </p>
+                                </span>
                             </div>
 
                             <div class="d-flex mb-3">
                                 <span class="u-icon__free u-icon__phone before::u-font-size-14 u-font-weight-bold u-color-folk-light-gray"></span>
-                                <p class="u-font-size-14 u-font-weight-regular u-color-folk-light-gray pl-2">
+                                <span class="u-font-size-14 u-font-weight-regular u-color-folk-light-gray pl-2 d-block">
                                 <?php echo get_field('telefone_rodape', 'option')?>
-                                </p>
+                                </span>
                             </div>
 
                             <div class="d-flex">
                                 <span class="u-icon__free u-icon__envelope before::u-font-size-14 u-font-weight-bold u-color-folk-light-gray"></span>
-                                <p class="u-font-size-14 u-font-weight-regular u-color-folk-light-gray pl-2">
+                                <span class="u-font-size-14 u-font-weight-regular u-color-folk-light-gray pl-2 d-block">
                                 <?php echo get_field('email_footer', 'option')?>
-                                </p>
+                                <span>
                             </div>
                         </div>
                     </div>
