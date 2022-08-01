@@ -177,7 +177,7 @@
 
                     <div class="col-12">
 
-                        <form method="GET" action="<?php echo get_home_url( null, '/' ) ?>">
+                        <form method="GET" action="<?php echo get_field( 'link_padrao_portal', 'option' ) ?>">
  
                             <div class="row justify-content-lg-center">
 
