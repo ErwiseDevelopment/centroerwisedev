@@ -27,13 +27,13 @@
                             Centro Âncora
                         </h2>
 
-                        <p class="u-font-size-14 lg:u-font-size-18 u-font-weight-bold u-color-folk-gray">
+                        <span class="d-block u-font-size-14 lg:u-font-size-18 u-font-weight-bold u-color-folk-gray">
                             <?php  echo get_field('campo_destaque')?>
-                        </p>
+                        </span>
 
-                        <p class="u-font-size-14 lg:u-font-size-18 u-font-weight-regular u-color-folk-gray">
+                        <span class="d-block u-font-size-14 lg:u-font-size-18 u-font-weight-regular u-color-folk-gray">
                         <?php  echo get_field('descricao')?>
-                        </p>
+                        </span>
 
                         <div class="row">
 
