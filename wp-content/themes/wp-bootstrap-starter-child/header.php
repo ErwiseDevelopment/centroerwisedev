@@ -60,7 +60,7 @@
                             </a>
                         <?php else : ?>
                             <a class="site-title" href="<?php echo esc_url( home_url( '/' )); ?>"><?php esc_url(bloginfo('name')); ?></a>
-                        <?php endif; ?>
+                        <?php endif; ?> 
 
                     </div>
                 </div>
@@ -82,7 +82,7 @@
                                             <a 
                                             class="d-flex align-items-center text-decoration-none" 
                                             href="mailto:<?php echo get_field('email_link', 'option')?>">
-                                                <span class="px:u-w-25 px:u-h-25 rounded-pill u-icon__free u-icon__envelope d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-14 u-font-weight-semibold u-color-folk-white u-bg-folk-medium-electric-blue">
+                                                <span class="px:u-w-25 px:u-h-25 rounded-pill u-icon__free u-icon__envelope d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-14 u-font-weight-semibold u-color-folk-white u-bg-folk-medium-cyan">
                                                     Envelope
                                                 </span>
 
@@ -97,7 +97,7 @@
                                             <a 
                                             class="d-flex align-items-center text-decoration-none" 
                                             href="#">
-                                                <span class="px:u-w-25 px:u-h-25 rounded-pill u-icon__free u-icon__phone d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-14 u-font-weight-semibold u-color-folk-white u-bg-folk-medium-electric-blue">
+                                                <span class="px:u-w-25 px:u-h-25 rounded-pill u-icon__free u-icon__phone d-flex justify-content-center align-items-center u-font-size-0 before::u-font-size-14 u-font-weight-semibold u-color-folk-white u-bg-folk-medium-cyan">
                                                     Telefone
                                                 </span>
 
@@ -115,7 +115,7 @@
 
                                         <li class="u-list-style-none">
                                             <a
-                                            class="u-icon__brands u-icon__facebook-square u-font-size-0 before::u-font-size-22 u-font-weight-light text-decoration-none u-color-folk-medium-electric-blue hover:u-color-folk-golden"
+                                            class="u-icon__brands u-icon__facebook-square u-font-size-0 before::u-font-size-22 u-font-weight-light text-decoration-none u-color-folk-medium-cyan hover:u-color-folk-golden"
                                             href="<?php echo get_field('facebook', 'option')?>"
                                             target="_blank"
                                             rel="noreferrer noopener">
@@ -125,7 +125,7 @@
 
                                         <li class="u-list-style-none ml-3">
                                             <a
-                                            class="u-icon__brands u-icon__instagram u-font-size-0 before::u-font-size-22 u-font-weight-light text-decoration-none u-color-folk-medium-electric-blue hover:u-color-folk-golden"
+                                            class="u-icon__brands u-icon__instagram u-font-size-0 before::u-font-size-22 u-font-weight-light text-decoration-none u-color-folk-medium-cyan hover:u-color-folk-golden"
                                             href="<?php echo get_field('instagram', 'option')?>"
                                             target="_blank"
                                             rel="noreferrer noopener">

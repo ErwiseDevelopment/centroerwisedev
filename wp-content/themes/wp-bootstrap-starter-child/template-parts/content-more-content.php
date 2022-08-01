@@ -58,7 +58,7 @@
                                                     <div class="col-6 mt-3">
 
                                                         <p
-                                                        class="w-100 u-box-shadow-pattern u-font-size-12 xxl:u-font-size-14 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-dark-blue hover:u-bg-folk-golden py-2">
+                                                        class="w-100 u-box-shadow-pattern u-font-size-12 xxl:u-font-size-14 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-medium-cyan hover:u-bg-folk-golden py-2">
                                                             Ler mais
                                                         </p>
                                                     </div>
@@ -85,7 +85,7 @@
                     <div class="col-8 col-md-3 mt-5">
 
                         <a
-                        class="w-100 u-box-shadow-pattern d-flex justify-content-center align-items-center u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-cyan-blue hover:u-bg-folk-golden py-3"
+                        class="w-100 u-box-shadow-pattern d-flex justify-content-center align-items-center u-font-size-18 u-font-weight-bold u-font-family-nunito text-center text-decoration-none u-color-folk-white u-bg-folk-medium-cyan hover:u-bg-folk-golden py-3"
                         href="<?php echo $link_pattern . 'blog'; ?>">
                             Ver mais
                         </a>

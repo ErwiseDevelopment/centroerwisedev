@@ -39,7 +39,7 @@
 
                             <div class="col-6 col-lg-4 mt-3">
                                 <a
-                                class="w-100 d-block u-font-size-18 u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-medium-electric-blue hover:u-bg-folk-golden py-3"
+                                class="w-100 d-block u-font-size-18 u-font-weight-bold text-center text-decoration-none u-color-folk-white u-bg-folk-medium-cyan hover:u-bg-folk-golden py-3"
                                 href="<?php echo get_field('saiba_mais')?>">
                                     Saiba mais
                                 </a>

@@ -559,6 +559,8 @@ button.swiper-pagination-bullet {
   background-color: #E9B53D !important; }
 .u-bg-folk-medium-electric-blue {
   background-color: #00539B !important; }
+.u-bg-folk-medium-cyan {
+  background-color: #376183 !important; }
 .u-bg-folk-very-dark-blue {
   background-color: #173B57 !important; }
 .u-bg-folk-none {
@@ -901,6 +903,8 @@ button.swiper-pagination-bullet {
   color: #5B5B5B !important; }
 .u-color-folk-light-gray {
   color: #B4B8C3 !important; }
+.u-color-folk-medium-cyan {
+  color: #376183 !important; }
 .u-color-folk-medium-electric-blue {
   color: #00539B !important; }
 .u-color-folk-white {
@@ -1791,7 +1795,7 @@ button.swiper-pagination-bullet {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    background-color: #00539B; }
+    background-color: #376183; }
   .l-navbar .nav-item:hover::before {
     width: 100%;
     opacity: 1;
